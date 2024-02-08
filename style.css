@@ -1,0 +1,64 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap'); */
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+body{
+    font-size: 16px;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--Light-pink);
+}
+#bg svg{
+    width: 100%;
+    height: 0%;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    transform: translate(-50%, -50%);
+    background-color: var(--White);
+    padding: 35px;
+    box-shadow: 2px 2px 12px black;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+.main h1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.question, .answer{
+    padding: 15px 0px;
+}
+.question{
+    font-weight: bolder;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.answer{
+    display: none;
+    color: var(--Grayish-purple);
+}
+.show ~ .answer{
+    display: block;
+}
